@@ -1,10 +1,12 @@
 import expres from 'express';
 import graphqlHTTP from 'express-graphql';
 import schema from './schema';
+import cors from 'cors';
 
 import { connect } from './database/database'
 
 const app = expres();
+app.use(cors());
 
 // database
 connect();
